@@ -38,9 +38,7 @@ $HOME/BANK_TECHNICAL_TEST/build/bank_transactions-0.0.1-SNAPSHOT.jar
 4- Verificar que ha inicado correctamente, si tinee problemas validar que el fichero .jar exista y rectificar la 
 ruta
 
-5- Para ver la documentacion y probar los endpoints navegue a la siguiente en su navegdor web url http://localhost:8084/swagger-ui.html#/bank-transaction-controller
-   debe sustituir localhost por la ip de la maquina donde esta ejecutando el jar. En la interface podra ver las diferentes operaciones y al hacer clic en cada una de ellas podra ver 
-   los detalles, como la documentacion datos de preuba con los cuale spodra realizar peticiones para validar los endpoint.
+5- Para ver la documentacion y probar los endpoints navegue a la siguiente en su navegdor web url http://localhost:8084/swagger-ui.html#/bank-transaction-controllerdebe sustituir localhost por la ip de la maquina donde esta ejecutando el jar. En la interface podra ver las diferentes operaciones y al hacer clic en cada una de ellas podra ver los detalles, como la documentacion datos de preuba con los cuale spodra realizar peticiones para validar los endpoint.
 
 6- Si ha desidido clonar el proyecto debera habrirlo en su IDE favorito.
 
@@ -55,5 +53,6 @@ Podra encontar el detalle de los casos en /BANK_TECHNICAL_TEST/src/test/java/com
 
 ## Mas informacion
 
+
 Echo por Carlos Adrian Soto Botero.
-http://localhost:8080/amil@gmail.com
+se elimina ultima linea
