@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flapping Cage Remake</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="header">
+      <div>
+        <p class="eyebrow">Remake Web</p>
+        <h1>Flapping Cage</h1>
+        <p class="subtitle">Ayuda a Cage a atravesar el cielo sin tocar las torres.</p>
+      </div>
+      <div class="scoreboard">
+        <div>
+          <span class="label">Puntuación</span>
+          <span id="score" class="value">0</span>
+        </div>
+        <div>
+          <span class="label">Mejor</span>
+          <span id="best" class="value">0</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="canvas-wrapper">
+      <canvas id="game" width="420" height="640" aria-label="Juego Flapping Cage"></canvas>
+      <div id="overlay" class="overlay" role="status">
+        <h2>Presiona espacio o toca para empezar</h2>
+        <p>Espacio / Click / Tap: Aletear</p>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <button id="restart" class="btn">Reiniciar partida</button>
+      <p>Consejo: Mantén el ritmo y evita las torres.</p>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
