@@ -1,0 +1,143 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #0b0d17;
+  color: #f4f7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background: radial-gradient(circle at top, #1b2240 0%, #090b12 65%);
+}
+
+.game-shell {
+  width: min(900px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  color: #8bd7ff;
+  margin: 0 0 4px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: #cbd4ff;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 18px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #99a7ff;
+}
+
+.value {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.canvas-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, #4cc9f0 0%, #0c1b3a 70%, #04060c 100%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 9, 20, 0.65);
+  text-align: center;
+  padding: 24px;
+  gap: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #a7b1ff;
+}
+
+.btn {
+  background: #ffb703;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 600;
+  color: #2b1d00;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(255, 183, 3, 0.35);
+}
+
+.btn:hover {
+  background: #ffd166;
+}
+
+@media (max-width: 720px) {
+  .scoreboard {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
