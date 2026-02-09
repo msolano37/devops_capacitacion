@@ -27,11 +27,23 @@ public class UfcSchedulePoster {
 
     @Scheduled(cron = "${ufc.cron:0 0 9 * * *}")
     public void postUpcomingEvents() {
-        List<UfcEvent> events = eventsService.fetchUpcomingEvents();
-        if (events.isEmpty()) {
+        String message = buildUpcomingEventsMessage();
+        if (message == null) {
             LOGGER.info("No upcoming UFC events found.");
             return;
         }
+        webhookClient.sendMessage(message);
+    }
+
+    public String buildUpcomingEventsMessage() {
+        List<UfcEvent> events = eventsService.fetchUpcomingEvents();
+        if (events.isEmpty()) {
+            return null;
+        }
+        return buildMessage(events);
+    }
+
+    public String buildMessage(List<UfcEvent> events) {
         StringBuilder message = new StringBuilder("**Próximas carteleras de UFC**\n");
         for (UfcEvent event : events) {
             message.append("• ")
@@ -42,6 +54,6 @@ public class UfcSchedulePoster {
                 .append(event.getVenue())
                 .append("\n");
         }
-        webhookClient.sendMessage(message.toString());
+        return message.toString();
     }
 }

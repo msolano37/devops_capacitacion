@@ -104,6 +104,11 @@
             <scope>test</scope>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>5.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>
